@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biblioteca de curso — Grupo 1</title>
+  <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Biblioteca de curso</h1>
+      <p class="sub">Grupo 1 · Programación Aplicada III · Caso 1</p>
+    </div>
+    <div id="cajaUsuario" class="oculto">
+      <div id="nombreUsuario"></div>
+      <div class="rol" id="rolUsuario"></div>
+      <button type="button" class="secundario" id="btnSalir">Cerrar sesión</button>
+    </div>
+  </header>
+  <main>
+    <section id="vistaLogin" class="panel">
+      <h2>Ingresar</h2>
+      <p class="sub">La cuenta define quién entra y qué puede hacer. No hay acceso sin sesión.</p>
+      <form id="formLogin">
+        <label for="correo">Correo</label>
+        <input id="correo" type="email" required placeholder="haroldl@curso.edu">
+        <label for="clave">Clave</label>
+        <input id="clave" type="password" required>
+        <p><button type="submit">Entrar</button></p>
+      </form>
+      <p class="aviso" id="avisoLogin"></p>
+      <p class="sub">Bibliotecario: haroldl@curso.edu / biblioteca123. Estudiantes: maicol@curso.edu, alejandroc@curso.edu, ximena@curso.edu o valentina@curso.edu, con la clave estudiante123.</p>
+    </section>
+
+    <section id="vistaApp" class="oculto">
+      <div class="panel">
+        <h2>Poderes de esta cuenta</h2>
+        <ul class="poderes" id="listaPoderes"></ul>
+      </div>
+      <p class="aviso" id="aviso"></p>
+
+      <div class="panel">
+        <h2>Catálogo</h2>
+        <form id="formLibro" class="oculto">
+          <div class="fila">
+            <div>
+              <label for="titulo">Título</label>
+              <input id="titulo" required>
+            </div>
+            <div>
+              <label for="autor">Autor</label>
+              <input id="autor" required>
+            </div>
+            <div>
+              <label for="categoria">Categoría</label>
+              <input id="categoria" value="General">
+            </div>
+            <div>
+              <label for="totales">Ejemplares totales</label>
+              <input id="totales" type="number" min="1" value="1" required>
+            </div>
+          </div>
+          <p><button type="submit">Guardar libro</button></p>
+        </form>
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Libro</th>
+              <th>Disponibles</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody id="tablaLibros"></tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h2>Registrar préstamo</h2>
+        <form id="formPrestamo" class="fila">
+          <div>
+            <label for="libroPrestamo">Libro</label>
+            <select id="libroPrestamo" required></select>
+          </div>
+          <div id="cajaEstudiante" class="oculto">
+            <label for="estudiantePrestamo">Estudiante</label>
+            <select id="estudiantePrestamo"></select>
+          </div>
+          <div>
+            <label>&nbsp;</label>
+            <button type="submit">Prestar</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h2 id="tituloPrestamos">Préstamos</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Libro</th>
+              <th>Estudiante</th>
+              <th>Prestado</th>
+              <th>Devuelto</th>
+              <th>Estado</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody id="tablaPrestamos"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

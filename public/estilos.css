@@ -1,0 +1,22 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Georgia, 'Segoe UI', sans-serif; background: #f4f6f4; color: #1b2420; }
+header, main { max-width: 980px; margin: 0 auto; padding: 24px 18px; }
+header { display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+h1, h2 { margin: 0 0 8px; }
+.sub, .rol { color: #5d6b64; font-size: 0.92rem; }
+.panel { background: #fff; border: 1px solid #d7dfd8; border-radius: 12px; padding: 18px; margin: 16px 0; }
+.oculto { display: none !important; }
+label { display: block; margin: 10px 0 4px; font-size: 0.9rem; }
+input, select, button { font: inherit; }
+input, select { width: 100%; padding: 10px 12px; border: 1px solid #c9d4cc; border-radius: 8px; background: #fff; }
+button { background: #2e7d46; color: #fff; border: 0; border-radius: 8px; padding: 10px 16px; cursor: pointer; }
+button.secundario { background: #eef3ef; color: #1b2420; }
+button.peligro { background: #a33b3b; }
+.fila { display: flex; gap: 12px; align-items: end; flex-wrap: wrap; }
+.fila > div { flex: 1; min-width: 180px; }
+table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid #e4ebe5; vertical-align: top; }
+th { color: #5d6b64; font-size: 0.82rem; }
+.aviso { min-height: 1.2em; }
+.aviso.error { color: #a33b3b; }
+.poderes { margin: 0; padding-left: 18px; }
